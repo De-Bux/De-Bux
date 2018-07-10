@@ -55,7 +55,7 @@ class ChartWindow extends Component {
           return <StateAndProps stateAndProps={propObj} key={index} />
         });
       }
-      if(props.stateAndPropsStore){
+      if(this.props.stateAndPropsStore){
         stateAndPropsList = this.props.stateAndPropsStore.map((propObj, index)=>{
           return <StateAndProps stateAndProps={propObj} key={index} />
         });
