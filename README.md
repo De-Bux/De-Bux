@@ -1,5 +1,5 @@
 # De-bux
-React Redux Devtool
+<h3><i>A React Redux Devtool</i></h3>
 
 
 <strong>De-bux</strong> is a React-Redux DevTool designed for helping developers debug their React applications more efficiently. De-bux allows you to visualize the component hierarchy of your React application and your Redux global store side by side, making development a breeze. 
