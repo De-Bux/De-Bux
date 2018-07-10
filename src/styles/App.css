@@ -1,0 +1,292 @@
+/*  ************************************************************************
+ * Created by Wontae Han, Alejandro Romero, Shafayat Alam and Jeff Schrock.
+ * Copyright © 2018 De-Bux. All rights reserved.
+ **************************************************************************/
+ .appWindow {
+    color: #4d92f9;
+} 
+
+.buttonDiv {
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+.navBar {
+    color: #4d92f9;
+    border-bottom: solid 0.5px #4d92f9;
+    margin-bottom: 2px;
+    display:block; 
+    flex-direction:row;
+    height: 45px;
+}
+
+.logo {
+    margin-left: 5px;
+}
+
+.navBar span{
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1em;
+    padding-top: 15px;
+}
+
+/*=================Hamburger Menu=================*/
+.optionbtn div{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.options {
+    display: block;
+    float: right;
+}
+
+.options-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.options-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.options-content a:hover {
+	background-color: #f1f1f1
+}
+
+.options:hover .options-content {
+    display: block;
+}
+
+.options:hover .optionbtn div {
+    background-color: #3e8e41;
+}
+
+/*============================================*/
+
+
+.chartWindow {
+    border: solid 0.5px;
+    border-color: #4d92f9;
+    width: 50%;
+    height: 425px;
+    margin: 2px;
+}
+
+.chartWindowDisplay {
+    height: 399px;
+    width: 100%;
+    overflow: auto;
+}
+
+.chartWindowRaw {
+    overflow: auto;
+}
+
+.infoWindow {
+    border: solid 0.5px;
+    border-color: #4d92f9;
+    width: 50%;
+    height: 200px; 
+    margin: 2px;
+    padding: 2px 2px 2px 2px;
+    overflow:auto;
+}
+
+.infoWindowDisplay {
+    height: 200px;
+    overflow: auto;
+}
+
+.logWindow {
+    border: solid 0.5px;
+    border-color: #4d92f9;
+    width: 50%;
+    height: 200px; 
+    margin: 2px;
+    padding: 2px 2px 2px 2px;
+    overflow:auto;
+}
+
+.infoWindow span{
+    margin: 2px 2px 2px 2px;  
+}
+
+.logWindow span{
+    margin: 2px 2px 2px 2px; 
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.logs {
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    padding: 3px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 5px;
+}
+
+.infoUL li {
+    list-style-type: none;
+    color:#75b766;
+}
+
+
+.stateAndProps {
+    color: #75b766;
+    font-weight: bold;
+    font-size: 12px;
+    /* margin: 2px;
+    padding: 5px; */
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    border-bottom: solid 0.5px;
+    border-color: #4d92f9;
+    width: 100%;
+}
+
+.stateAndPropsDiv {
+    overflow: auto;
+}
+
+
+.rowCols{
+    display:flex; 
+    flex-direction:row;
+}
+
+.toggle{
+    display:flex; 
+    flex-direction:row;
+    padding: 2px 2px 2px 2px;
+    margin: 1px 1px 0px 1px;
+    height: 20px;
+    background-color: #1d2430;
+}
+
+.toggle span{
+    font-size: 12px;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #232a35;
+    min-width: 125px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 8px 12px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content p {
+    color: #4d92f9;
+    padding: 8px 12px;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content p:hover {
+    background-color: #21262e;
+}
+
+i {
+    border: solid #4d92f9;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 3px;
+  }
+  .arrowDown {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.button {
+    background-color: transparent; 
+    border: none;
+    color: #4d92f9;
+    padding: 3px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.expandButton{
+    background-color: #008CBA; 
+    border: none;
+    color: white;
+    margin-right: 10px;
+    /* float: right; */
+}
+
+.scrollbar {
+    /* background-color: #F5F5F5; */
+    float: left;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-left: 22px;
+    margin-top: 40px;
+    width: 65px;
+    overflow-y: hidden;
+    background-color: transparent;
+}
+
+.force-overflow {
+    width: 6px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color:transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: transparent; 
+}
