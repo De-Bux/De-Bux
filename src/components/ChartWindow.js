@@ -12,7 +12,7 @@ const ChartWindow = (props) => {
   let stateAndPropsList = [];
   if(props.displayType === 'Tree') {
     if(props.treeData) {
-      displayTree.push(<D3Tree key={'compTree'} treeData = {props.treeData} onMouseOver={props.onMouseOver}/>);
+      displayTree.push(<D3Tree key={'compTree'} treeData = {props.treeData} onMouseOver={props.onMouseOver} treeOrientation={props.treeOrientation}/>);
     }
       if(props.storeData && props.storeData.length) {
         displayTree.push(
@@ -20,7 +20,8 @@ const ChartWindow = (props) => {
             key={'storeTree'} 
             storeTreeData = {props.storeData} 
             onMouseOverStore={props.onMouseOverStore} 
-            onMouseOutStore={props.onMouseOutStore}/>);
+            onMouseOutStore={props.onMouseOutStore}
+            treeOrientation={props.treeOrientation}/>);
       }
   } else {
       if(props.stateAndProps) {

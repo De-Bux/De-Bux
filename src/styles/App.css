@@ -71,7 +71,7 @@
 }
 
 .options:hover .optionbtn div {
-    background-color: black;
+    background-color: #75b766;
 }
 
 /*============================================*/
@@ -135,9 +135,9 @@ ul {
 }
 
 .logs {
-    background-color: #008CBA; 
-    border: none;
-    color: white;
+    background-color: transparent; 
+    border: 1px solid #75b766;
+    color: #75b766;
     padding: 3px 8px;
     text-align: center;
     text-decoration: none;
