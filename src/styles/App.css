@@ -25,19 +25,19 @@
 }
 
 .navBar span{
-    font-size: 20px;
+    font-size: 26px;
     display: inline-block;
     vertical-align: top;
     line-height: 1em;
-    padding-top: 15px;
+    padding-top: 8px;
 }
 
 /*=================Hamburger Menu=================*/
 .optionbtn div{
     width: 35px;
     height: 5px;
-    background-color: black;
-    margin: 6px 0;
+    background-color: #4d92f9;
+    margin: 6px 6px;
 }
 
 .options {
@@ -49,21 +49,21 @@
     display: none;
     position: absolute;
     right: 0;
-    background-color: #f9f9f9;
+    background-color: #232a35;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .options-content a {
-    color: black;
+    color: #4d92f9;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .options-content a:hover {
-	background-color: #f1f1f1
+	background-color: #21262e
 }
 
 .options:hover .options-content {
@@ -71,7 +71,7 @@
 }
 
 .options:hover .optionbtn div {
-    background-color: #3e8e41;
+    background-color: black;
 }
 
 /*============================================*/
