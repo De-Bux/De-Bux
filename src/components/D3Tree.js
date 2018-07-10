@@ -8,7 +8,6 @@ import Tree from 'react-d3-tree';
 class D3Tree extends Component {
   constructor(props) {
     super(props);
-    // Tree.defaultProps.orientation = props.treeOrientation;
     this.state = {};
   }
   componentDidMount() {
@@ -58,8 +57,8 @@ class D3Tree extends Component {
     return (
       <div class="treeWrapper" style={{width:'100%', height:'399px'}} ref={tc => (this.treeContainer = tc)}>
         {this.props.treeData && 
-          <Tree 
-            orientation = {this.props.treeOrientation}
+          <Tree
+            orientation = {this.props.treeOrientation} 
             data={treeData} 
             styles={styles} 
             onMouseOver={onMouseOver}
@@ -76,7 +75,7 @@ class D3Tree extends Component {
           />}
         {this.props.storeTreeData && 
           <Tree 
-            orientation = {this.props.treeOrientation}
+            orientation = {this.props.treeOrientation} 
             data={storeTreeData} 
             styles={styles} 
             onMouseOver={onMouseOverStore}
