@@ -66,18 +66,17 @@ class MainDisplay extends Component {
             dropDownHandleClick={this.dropDownHandleClickL} 
             displayType={this.state.displayTreeL} 
             stateAndProps={this.props.stateAndProps}
-            handleClick={this.props.handleClick}/>
+            handleClick={this.props.handleClick}
+            treeOrientation={this.props.treeOrientation}/>
           <ChartWindow 
             treeType='Store:' 
             storeData={this.props.storeData} 
             onMouseOverStore={this.onMouseOverStore} 
             dropDownHandleClick={this.dropDownHandleClickR} 
             displayType={this.state.displayTreeR} 
-            stateAndPropsStore={this.props.stateAndPropsStore}/>
+            stateAndPropsStore={this.props.stateAndPropsStore}
+            treeOrientation={this.props.treeOrientation}/>
         </div>
-        {/* <button className="button" onClick={()=>this.props.handleClick('dom')}>DOMs</button>
-        <span> </span>
-        <button className="button" onClick={()=>this.props.handleClick('component')}>Components</button> */}
         <span> </span>
         <div className="rowCols">
           <InfoWindow allStateAndPropsData={this.state.datailInfo}/>

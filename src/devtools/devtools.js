@@ -11,6 +11,7 @@ import '../styles/App.css';
 import NavBar from '../components/NavBar';
 import ChartWindow from '../components/ChartWindow';
 import MainDisplay from '../components/MainDisplay';
+import Tree from 'react-d3-tree';
 
 let curData;
 let logMode = false;
@@ -28,6 +29,7 @@ class App extends Component {
       stateAndProps: [],
       stateAndPropsStore: [],
       memory: [],
+      treeOrientation: 'vertical',
     };
     chrome.devtools.panels.create(
       'debux',
@@ -240,6 +242,16 @@ class App extends Component {
     }
   }
 
+  toggleTreeOrientation = (orientation) => {
+    this.setState({
+      treeOrientation: orientation,
+    });
+    console.log('HITTING ME! OUCH!', orientation)
+    console.log(this.state.treeOrientation)
+  }
+
+ 
+
   componentWillUnmount() {
     clearInterval(this.update);
     this.update = 0;
@@ -266,7 +278,7 @@ class App extends Component {
   render() {
     return (
       <div className='appWindow'>
-        <NavBar/>
+        <NavBar toggleTreeOrientation={this.toggleTreeOrientation}/>
         <MainDisplay 
           treeData={this.state.treeData} 
           storeData={this.state.storeHistory} 
@@ -274,7 +286,8 @@ class App extends Component {
           stateAndProps={this.state.stateAndProps} 
           stateAndPropsStore={this.state.stateAndPropsStore}
           handleClickLog={this.handleClickLog}
-          handleClick={this.handleClick}/>
+          handleClick={this.handleClick}
+          treeOrientation={this.state.treeOrientation}/>
         <br />
       </div>
     );
