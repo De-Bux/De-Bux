@@ -10,16 +10,6 @@ class NavBar extends Component {
   constructor(props) {
     super(props);
   }
-
-  toggleTreeOrientation() {
-    console.log('click!');
-    if(Tree.defaultProps.orientation === 'vertical'){
-      Tree.defaultProps.orientation = 'horizontal';
-    } else {
-      Tree.defaultProps.orientation = 'vertical';
-    }
-  }
-
   render() {
     return (
       <div className = 'navBar'>
@@ -32,9 +22,11 @@ class NavBar extends Component {
             <div></div>
           </div>
           <div id="showoption" class="options-content">
-            <a onClick={this.toggleTreeOrientation}>Toggle Orientation</a>
-            <a onClick=''>Display Components Only</a>
-            <a onClick=''>Display Store Only</a>
+            <a onClick={() => this.props.treeOrientation('vertical')}>Set Orientation vertical</a>
+            <a onClick={() => this.props.treeOrientation('horizontal')}>Set Orientation horizontal</a>
+            <a onClick={() => this.props.clickDisplay('component')}>Display Components Only</a>
+            <a onClick={() => this.props.clickDisplay('store')}>Display Store Only</a>
+            <a onClick={() => this.props.clickDisplay('all')}>Display All</a>
           </div>
         </div>
       </div>

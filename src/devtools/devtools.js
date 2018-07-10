@@ -22,12 +22,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
       treeData: null, 
       storeHistory: [],
       stateAndProps: [],
       stateAndPropsStore: [],
       memory: [],
+      displayWindow: 'all',
+      treeOrientation: 'vertical',
     };
     chrome.devtools.panels.create(
       'debux',
@@ -204,6 +205,18 @@ class App extends Component {
     });
   }
 
+  treeOrientation = (orientation) => {
+    this.setState({
+      treeOrientation: orientation,
+    });
+  }
+
+  clickDisplay = (str) => {
+    this.setState({
+      displayWindow: str
+    });
+  }
+
   updateTree = (str) => {
     if(curData) {
       if(curData.data) {
@@ -266,7 +279,7 @@ class App extends Component {
   render() {
     return (
       <div className='appWindow'>
-        <NavBar/>
+        <NavBar clickDisplay={this.clickDisplay} treeOrientation={this.treeOrientation}/>
         <MainDisplay 
           treeData={this.state.treeData} 
           storeData={this.state.storeHistory} 
@@ -274,7 +287,9 @@ class App extends Component {
           stateAndProps={this.state.stateAndProps} 
           stateAndPropsStore={this.state.stateAndPropsStore}
           handleClickLog={this.handleClickLog}
-          handleClick={this.handleClick}/>
+          handleClick={this.handleClick}
+          displayWindow={this.state.displayWindow}
+          treeOrientation={this.state.treeOrientation}/>
         <br />
       </div>
     );
