@@ -11,6 +11,7 @@ import '../styles/App.css';
 import NavBar from '../components/NavBar';
 import ChartWindow from '../components/ChartWindow';
 import MainDisplay from '../components/MainDisplay';
+import Tree from 'react-d3-tree';
 
 let curData;
 let logMode = false;
@@ -252,6 +253,16 @@ class App extends Component {
       }
     }
   }
+
+  toggleTreeOrientation = (orientation) => {
+    this.setState({
+      treeOrientation: orientation,
+    });
+    console.log('HITTING ME! OUCH!', orientation)
+    console.log(this.state.treeOrientation)
+  }
+
+ 
 
   componentWillUnmount() {
     clearInterval(this.update);
