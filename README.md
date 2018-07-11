@@ -20,3 +20,5 @@
 
 ![](demo1.gif)
 
+**Notes**  The current version of De-Bux works best for local projects. We are currently working on adding more tests to our test suite.
+
