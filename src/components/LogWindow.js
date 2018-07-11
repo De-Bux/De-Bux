@@ -6,11 +6,12 @@ import React from 'react';
 import Logs from './Logs';
 
 const LogWindow = (props) => {
+  const { memory, handleClickLog } = props;
   return (
     <div className="logWindow">
       Logs:
       <div className='infoWindowDisplay'>
-        <Logs memory={props.memory} handleClickLog={props.handleClickLog}/>
+        <Logs memory={memory} handleClickLog={handleClickLog}/>
       </div>
     </div>
   );

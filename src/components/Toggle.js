@@ -5,18 +5,20 @@
 import React from 'react';
 import DropDown from './DropDown';
 
-
 const Toggle = (props) => {
+  const { treeType, dropDownHandleClick, handleClick } = props;
   return (
     <div className='toggle'>
-      <span>{props.treeType}</span>
-      <DropDown dropDownHandleClick={props.dropDownHandleClick}/>
+      <span>{ treeType }</span>
+      <DropDown dropDownHandleClick = { dropDownHandleClick }/>
       <div className="buttonDiv">
-        {props.treeType === 'Components:' && <button className="button" onClick={()=>props.handleClick('dom')}>DOMs</button>}
-        {props.treeType === 'Components:' && <button className="button" onClick={()=>props.handleClick('component')}>Components</button>} 
+        {treeType === 'Components:' && 
+          <button className="button" onClick={()=>handleClick('dom')}>DOMs</button>}
+        {treeType === 'Components:' && 
+          <button className="button" onClick={()=>handleClick('component')}>Components</button>} 
       </div>
     </div>
-);
+  );
 };
 
 export default Toggle;

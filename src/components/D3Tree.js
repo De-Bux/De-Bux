@@ -19,7 +19,6 @@ class D3Tree extends Component {
       }
     });
   }
-  
   render() {
     const styles = {
       nodes: {
@@ -53,16 +52,17 @@ class D3Tree extends Component {
         },
       },
     };
-    const { treeData, storeTreeData, onMouseOver, onMouseOverStore, onMouseOutStore } = this.props;
+    const { translate } = this.state;
+    const { treeData, storeTreeData, onMouseOver, onMouseOverStore, onMouseOutStore, treeOrientation } = this.props;
     return (
       <div class="treeWrapper" style={{width:'100%', height:'399px'}} ref={tc => (this.treeContainer = tc)}>
-        {this.props.treeData && 
+        {treeData && 
           <Tree
-            orientation = {this.props.treeOrientation} 
+            orientation = {treeOrientation} 
             data={treeData} 
             styles={styles} 
             onMouseOver={onMouseOver}
-            translate={this.state.translate}
+            translate={translate}
             nodeSize={{
               x:150,
               y:150
@@ -73,13 +73,13 @@ class D3Tree extends Component {
             }}
             zoom={0.5}
           />}
-        {this.props.storeTreeData && 
+        {storeTreeData && 
           <Tree 
-            orientation = {this.props.treeOrientation} 
+            orientation = {treeOrientation} 
             data={storeTreeData} 
             styles={styles} 
             onMouseOver={onMouseOverStore}
-            translate={this.state.translate}
+            translate={translate}
             nodeSize={{
               x:150,
               y:150

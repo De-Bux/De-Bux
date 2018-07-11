@@ -4,10 +4,10 @@
  **************************************************************************/
 import React from 'react';
 const Logs = (props) => {
-  const actions = props.memory;
-  const dispatchedActions = actions.map((action) =>
-    <li className='logs' onClick={()=> props.handleClickLog(action.state)}>Action [{action.count}]</li>
-    );
+  const { memory, handleClickLog } = props;
+  const dispatchedActions = memory.map((action) =>
+    <li className='logs' onClick={()=> handleClickLog(action.state)}>Action [{action.count}]</li>
+  );
   return (
     <ul>{dispatchedActions}</ul>
   )

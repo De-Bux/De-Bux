@@ -32,31 +32,32 @@ class ChartWindow extends Component {
   render() {
     let displayTree = [];
     let stateAndPropsList = [];
-    if(this.props.displayType === 'Tree') {
-      if(this.props.treeData) {
+    const { treeData, treeType, storeData, displayType, stateAndProps, stateAndPropsStore, handleClick, dropDownHandleClick, onMouseOver, onMouseOverStore, onMouseOutStore, treeOrientation  } = this.props;
+    if(displayType === 'Tree') {
+      if(treeData) {
         displayTree.push(<D3Tree 
                           key={'compTree'} 
-                          treeData = {this.props.treeData} 
-                          onMouseOver={this.props.onMouseOver} 
-                          treeOrientation={this.props.treeOrientation}/>);
+                          treeData = {treeData} 
+                          onMouseOver={onMouseOver} 
+                          treeOrientation={treeOrientation}/>);
       }
-        if(this.props.storeData && this.props.storeData.length) {
+        if(storeData && storeData.length) {
           displayTree.push(
             <D3Tree 
               key={'storeTree'} 
-              storeTreeData = {this.props.storeData} 
-              onMouseOverStore={this.props.onMouseOverStore} 
-              onMouseOutStore={this.props.onMouseOutStore}
-              treeOrientation={this.props.treeOrientation}/>);
+              storeTreeData = {storeData} 
+              onMouseOverStore={onMouseOverStore} 
+              onMouseOutStore={onMouseOutStore}
+              treeOrientation={treeOrientation}/>);
         }
     } else {
-      if(this.props.stateAndProps) {
-        stateAndPropsList = this.props.stateAndProps.map((propObj, index)=>{
+      if(stateAndProps) {
+        stateAndPropsList = stateAndProps.map((propObj, index)=>{
           return <StateAndProps stateAndProps={propObj} key={index} />
         });
       }
-      if(this.props.stateAndPropsStore){
-        stateAndPropsList = this.props.stateAndPropsStore.map((propObj, index)=>{
+      if(stateAndPropsStore){
+        stateAndPropsList = stateAndPropsStore.map((propObj, index)=>{
           return <StateAndProps stateAndProps={propObj} key={index} />
         });
       }
@@ -65,10 +66,10 @@ class ChartWindow extends Component {
     return (
       <div className="chartWindow" style={{width:this.state.width}} >
         <Toggle 
-        treeType={this.props.treeType} 
-        treeData={this.props.treeData} 
-        dropDownHandleClick={this.props.dropDownHandleClick}
-        handleClick={this.props.handleClick}/>
+        treeType={treeType} 
+        treeData={treeData} 
+        dropDownHandleClick={dropDownHandleClick}
+        handleClick={handleClick}/>
         <div className="chartWindowDisplay">
           {displayTree}
           {stateAndPropsList}
