@@ -12,6 +12,7 @@ import NavBar from '../components/NavBar';
 import ChartWindow from '../components/ChartWindow';
 import MainDisplay from '../components/MainDisplay';
 import Tree from 'react-d3-tree';
+import { throttle } from 'lodash';
 
 let curData;
 let logMode = false;
@@ -218,7 +219,7 @@ class App extends Component {
     });
   }
 
-  updateTree = (str) => {
+  updateTree = throttle((str) => {
     if(curData) {
       if(curData.data) {
         let updateData = curData.data[0];
@@ -252,17 +253,7 @@ class App extends Component {
         }
       }
     }
-  }
-
-  toggleTreeOrientation = (orientation) => {
-    this.setState({
-      treeOrientation: orientation,
-    });
-    console.log('HITTING ME! OUCH!', orientation)
-    console.log(this.state.treeOrientation)
-  }
-
- 
+  }, 100);
 
   componentWillUnmount() {
     clearInterval(this.update);
