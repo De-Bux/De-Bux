@@ -10,7 +10,7 @@
 
 1. Install <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en">React DevTools</a>. 
 
-2. Install De-Bux to your chrome://extensions. Change to developer mode and "Load Unpacked" the build folder.
+2. Install <a href="https://chrome.google.com/webstore/detail/debux/ooihnkghpifccalpfakdnlolfaiidfjp?authuser=1">De-Bux</a> to your chrome://extensions. Change to developer mode and "Load Unpacked" the build folder.
 
 3. Run your React-Redux application or open a site that uses React Fiber.
 
@@ -20,9 +20,16 @@
 
 ### --Set up | Build your own--
 
-1. Clone the repo and npm install
+1. Clone the repo and install dependendies: 
 
-2. Use npm run build or npm run watch
+```npm install```
+
+2. Build De-Bux to be used in Chrome Dev Tools: 
+
+```npm run build ```
+or 
+
+```npm run watch```
 
 3. In Chrome Browser, open more tools and Extensions tab and click 'Load Unpacked' 
 
@@ -44,8 +51,9 @@
 **Note:**  The current version of De-Bux works best for local projects. We are currently working on adding more tests to our test suite.
 
 ## Testing
-Run npm test to run the test suite
+Run current unit tests or build new ones and execute test suite:
 
+```npm run test```
 ## Authors
 
 Wontae Han (https://github.com/wontaeh)
