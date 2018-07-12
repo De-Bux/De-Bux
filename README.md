@@ -22,15 +22,15 @@
 
 1. Clone the repo and install dependendies: 
 
-```npm install```
+  ```npm install```
 
 2. Build De-Bux to be used in Chrome Dev Tools: 
 
-```npm run build ``` or ```npm run watch```
+  ```npm run build ``` or ```npm run watch```
 
 3. In Chrome Browser, open more tools and Extensions tab and click 'Load Unpacked' 
 
-4. Select the folder './debux/build'
+4. Navigate to your local De-Bux directory and select the folder './debux/build'
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@
 ## Testing
 Run current unit tests or build new ones and execute test suite:
 
-```npm run test```
+  ```npm run test```
 ## Authors
 
 Wontae Han (https://github.com/wontaeh)
