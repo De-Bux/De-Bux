@@ -6,7 +6,7 @@
 <strong>De-Bux</strong> is a React-Redux DevTool designed for helping developers debug their React applications more efficiently. De-Bux allows you to visualize the component hierarchy of your React application and your Redux global store side by side, making development a breeze. 
 
 
-###--Set Up | Install From Chrome Extension Store--
+### --Set Up | Install From Chrome Extension Store--
 
 1. Install <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en">React DevTools</a>. 
 
@@ -18,7 +18,7 @@
 
 5. Have fun!
 
-###--Set up | Build your own--
+### --Set up | Build your own--
 
 1. Clone the repo and npm install
 
