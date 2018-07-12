@@ -22,11 +22,11 @@
 
 1. Clone the repo and install dependendies: 
 
-  ```npm install```
+    ```npm install```
 
 2. Build De-Bux to be used in Chrome Dev Tools: 
 
-  ```npm run build ``` or ```npm run watch```
+    ```npm run build ``` or ```npm run watch```
 
 3. In Chrome Browser, open more tools and Extensions tab and click 'Load Unpacked' 
 
