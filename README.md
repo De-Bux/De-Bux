@@ -32,6 +32,8 @@
 
 4. Navigate to your local De-Bux directory and select the folder './debux/build'
 
+5. Have fun!
+
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 ## Usage
