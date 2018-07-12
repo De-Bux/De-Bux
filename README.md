@@ -60,4 +60,4 @@ Jeffrey Schrock (https://github.com/RhythmMagi)
 
 Like what you see or have any suggestions?
 Feel free to contact to us!
-DeBuxDevtool@gamil.com
+DeBuxDevtool@gmail.com
