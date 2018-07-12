@@ -5,8 +5,9 @@
 import React from 'react';
 
 const stateAndProps = (props) => {
+  const { stateAndProps } = props;
   return (
-    <pre className='stateAndProps'>{JSON.stringify(props.stateAndProps, undefined, 2)}</pre>
+    <pre className='stateAndProps'>{JSON.stringify(stateAndProps, undefined, 2)}</pre>
   )
 }
 

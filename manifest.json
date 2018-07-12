@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "debux",
+  "name": "Debux",
   "description": "React Redux devtool",
   "version": "1.0",
   "permissions": [

@@ -25,9 +25,9 @@ if(!runDebux) {
 
       // React 15 or below
       } else if(instance && instance.Reconciler) {
-        console.log('React version(16+) is required');
+        console.warn('React version(16+) is required to use De-Bux Devtool');
       } else {
-        console.log('React not found');
+        console.warn('React not found, React is required to use De-Bux Devtool');
       }
     })();
 
@@ -35,7 +35,8 @@ if(!runDebux) {
       traverse16(virtualDOM);
     });
   } else {
-    console.log('React devtool is not installed.')
+    console.warn('React devtool is required to use De-Bux Devtool')
   }
+ 
   runDebux = true;
 }

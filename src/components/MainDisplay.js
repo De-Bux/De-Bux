@@ -54,35 +54,43 @@ class MainDisplay extends Component {
     });
   }
 
-
   render() {
+    const { onMouseOver, onMouseOverStore, dropDownHandleClickL, dropDownHandleClickR } = this;
+    const { datailInfo, displayTreeL, displayTreeR } = this.state;
+    const { treeData, stateAndProps, handleClick, displayWindow, treeOrientation, storeData, stateAndPropsStore, memory, handleClickLog } = this.props;
+    const componentChartWindow = <ChartWindow 
+                                    treeType='Components:' 
+                                    treeData={treeData} 
+                                    onMouseOver={onMouseOver} 
+                                    dropDownHandleClick={dropDownHandleClickL} 
+                                    displayType={displayTreeL} 
+                                    stateAndProps={stateAndProps}
+                                    handleClick={handleClick}
+                                    displayWindow={displayWindow}
+                                    treeOrientation={treeOrientation}/>;
+    const storeChartWindow = <ChartWindow 
+                                treeType='Store:' 
+                                storeData={storeData} 
+                                onMouseOverStore={onMouseOverStore} 
+                                dropDownHandleClick={dropDownHandleClickR} 
+                                displayType={displayTreeR} 
+                                stateAndPropsStore={stateAndPropsStore}
+                                displayWindow={displayWindow}
+                                treeOrientation={treeOrientation}/>;
+
     return (
       <div className="mainDiv">
         <div className="rowCols">
-          <ChartWindow 
-            treeType='Components:' 
-            treeData={this.props.treeData} 
-            onMouseOver={this.onMouseOver} 
-            dropDownHandleClick={this.dropDownHandleClickL} 
-            displayType={this.state.displayTreeL} 
-            stateAndProps={this.props.stateAndProps}
-            handleClick={this.props.handleClick}/>
-          <ChartWindow 
-            treeType='Store:' 
-            storeData={this.props.storeData} 
-            onMouseOverStore={this.onMouseOverStore} 
-            dropDownHandleClick={this.dropDownHandleClickR} 
-            displayType={this.state.displayTreeR} 
-            stateAndPropsStore={this.props.stateAndPropsStore}/>
+          {displayWindow === 'all' && componentChartWindow}
+          {displayWindow === 'all' && storeChartWindow}
+          {displayWindow === 'component' && componentChartWindow}
+          {displayWindow === 'store' && storeChartWindow}
         </div>
-        {/* <button className="button" onClick={()=>this.props.handleClick('dom')}>DOMs</button>
-        <span> </span>
-        <button className="button" onClick={()=>this.props.handleClick('component')}>Components</button> */}
         <span> </span>
         <div className="rowCols">
-          <InfoWindow allStateAndPropsData={this.state.datailInfo}/>
-          <LogWindow memory={this.props.memory} handleClickLog={this.props.handleClickLog} />
-        </div>
+          <InfoWindow allStateAndPropsData={datailInfo}/>
+          <LogWindow memory={memory} handleClickLog={handleClickLog} />
+        </div> 
       </div>
     );
   }

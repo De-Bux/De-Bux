@@ -6,13 +6,10 @@ import React from 'react';
 import StateAndProps from './StateAndProps';
 
 const InfoWindow = (props) => {
-  let stateAndPropsList = null;
-
-  if (props.allStateAndPropsData.length) {
-    stateAndPropsList = props.allStateAndPropsData.map((propObj, index) => {
-      return <StateAndProps stateAndProps={propObj} key={index}/>
-    });
-  }
+  const { allStateAndPropsData } = props;
+  const stateAndPropsList = allStateAndPropsData.map((propObj, index) => {
+    return <StateAndProps stateAndProps={propObj} key={'stateAndProps'+index}/>
+  });
   
   return (
     <div className='infoWindow'> 

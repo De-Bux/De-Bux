@@ -4,11 +4,10 @@
  **************************************************************************/
 import React from 'react';
 const Logs = (props) => {
-  const actions = props.memory;
-  // const actions = [{Name: 'Action 1'},{Name: 'Action 2'},{Name: 'Action 3'},{Name: 'Action 4'},{Name: 'Action 4'},{Name: 'Action 4'},{Name: 'Action 4'},{Name: 'Action 4'},{Name: 'Action 4'},{Name: 'Action 4'},{Name: 'Action 4'},{Name: 'Action 4'}];
-  const dispatchedActions = actions.map((action) =>
-    <li className='logs' onClick={()=> props.handleClickLog(action.state)}>Action [{action.count}]</li>
-    );
+  const { memory, handleClickLog } = props;
+  const dispatchedActions = memory.map((action) =>
+    <li className='logs' onClick={()=> handleClickLog(action.state)}>Action [{action.count}]</li>
+  );
   return (
     <ul>{dispatchedActions}</ul>
   )

@@ -18,7 +18,8 @@
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
-![](demo1.gif)
+![](assets/demo_1.gif)
+![](assets/demo_2.gif)
+![](assets/demo_3.gif)
 
 **Note:**  The current version of De-Bux works best for local projects. We are currently working on adding more tests to our test suite.
-

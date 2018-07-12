@@ -11,6 +11,8 @@ import '../styles/App.css';
 import NavBar from '../components/NavBar';
 import ChartWindow from '../components/ChartWindow';
 import MainDisplay from '../components/MainDisplay';
+import Tree from 'react-d3-tree';
+import { throttle } from 'lodash';
 
 let curData;
 let logMode = false;
@@ -22,15 +24,16 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
       treeData: null, 
       storeHistory: [],
       stateAndProps: [],
       stateAndPropsStore: [],
       memory: [],
+      displayWindow: 'all',
+      treeOrientation: 'vertical',
     };
     chrome.devtools.panels.create(
-      'debux',
+      'Debux',
       null, // icon
       'devtools.html',
       () => {
@@ -204,7 +207,19 @@ class App extends Component {
     });
   }
 
-  updateTree = (str) => {
+  treeOrientationToggle = (orientation) => {
+    this.setState({
+      treeOrientation: orientation,
+    });
+  }
+
+  clickDisplay = (str) => {
+    this.setState({
+      displayWindow: str
+    });
+  }
+
+  updateTree = throttle((str) => {
     if(curData) {
       if(curData.data) {
         let updateData = curData.data[0];
@@ -238,7 +253,7 @@ class App extends Component {
         }
       }
     }
-  }
+  }, 100);
 
   componentWillUnmount() {
     clearInterval(this.update);
@@ -264,17 +279,21 @@ class App extends Component {
   }
 
   render() {
+    const { handleClick, handleClickLog, clickDisplay, treeOrientationToggle } = this;
+    const { treeData, storeHistory, stateAndProps, stateAndPropsStore, memory, displayWindow, treeOrientation } = this.state;
     return (
       <div className='appWindow'>
-        <NavBar/>
+        <NavBar clickDisplay={clickDisplay} treeOrientationToggle={treeOrientationToggle}/>
         <MainDisplay 
-          treeData={this.state.treeData} 
-          storeData={this.state.storeHistory} 
-          memory={this.state.memory} 
-          stateAndProps={this.state.stateAndProps} 
-          stateAndPropsStore={this.state.stateAndPropsStore}
-          handleClickLog={this.handleClickLog}
-          handleClick={this.handleClick}/>
+          treeData={treeData} 
+          storeData={storeHistory} 
+          memory={memory} 
+          stateAndProps={stateAndProps} 
+          stateAndPropsStore={stateAndPropsStore}
+          handleClickLog={handleClickLog}
+          handleClick={handleClick}
+          displayWindow={displayWindow}
+          treeOrientation={treeOrientation}/>
         <br />
       </div>
     );
