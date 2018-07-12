@@ -10,9 +10,9 @@
 
 1. Install <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en">React DevTools</a>. 
 
-2. Install <a href="https://chrome.google.com/webstore/detail/debux/ooihnkghpifccalpfakdnlolfaiidfjp?authuser=1">De-Bux</a> to your chrome://extensions. Change to developer mode and "Load Unpacked" the build folder.
+2. Install <a href="https://chrome.google.com/webstore/detail/debux/ooihnkghpifccalpfakdnlolfaiidfjp?authuser=1">De-Bux</a> to your chrome://extensions from the <a href="https://chrome.google.com/webstore/category/extensions">Chrome Web Store</a>.
 
-3. Run your React-Redux application or open a site that uses React Fiber.
+3. Run your React-Redux application or open a site that uses React Fiber (React 16+).
 
 4. Open Chrome Developer Tools, Click on the “>>” button and select De-Bux.
 
