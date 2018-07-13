@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "De-Bux",
   "description": "React Redux devtool",
-  "version": "1.0",
+  "version": "1.0.1",
   "permissions": [
     "*://*/*",
     "tabs",
