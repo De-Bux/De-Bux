@@ -62,4 +62,4 @@ Like what you see or have any suggestions?
 Feel free to contact to us!
 DeBuxDevtool@gmail.com
 
-<a href="https://De-Bux.com">De-Bux.com</a>
+Visit our Website <a href="https://De-Bux.com">De-Bux.com</a>
