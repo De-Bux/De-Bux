@@ -1,5 +1,5 @@
 # De-Bux 
-<img src="/assets/DebuxLogoLarge.png" width="200px"/>
+<img src="/assets/440x280.png" width="200px"/>
 <h3><i>A React-Redux DevTool</i></h3>
 
 
