@@ -3,14 +3,14 @@
  * Copyright © 2018 De-Bux. All rights reserved.
  **************************************************************************/
 import React, { Component } from 'react';
-import Logo from '../img/DebuxLogo48.png'
+import Logo from '../img/DebuxLogoLarge.png'
 
 const NavBar = (props) => {
   const { treeOrientationToggle, clickDisplay } = props;
   return (
     <div className = 'navBar'>
-      <span>De-Bux</span>
-      <img className = 'logo' src={Logo} />
+      {/* <span>De-Bux</span> */}
+      <img className = 'logo' src={Logo} style={{height:'45px'}}/>
       <div class="options">
         <div onclick="options()" class="optionbtn">
           <div></div>

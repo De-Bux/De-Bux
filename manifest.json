@@ -17,7 +17,8 @@
     "default_icon": {
       "16": "img/DebuxLogo16.png",
       "48": "img/DebuxLogo48.png",
-      "128": "img/DebuxLogo128.png"
+      "128": "img/DebuxLogo128.png",
+      "256": "img/DebuxLogo256.png"
     }
   },
   "devtools_page": "devtools.html",
